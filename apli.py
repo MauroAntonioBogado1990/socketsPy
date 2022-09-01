@@ -1,11 +1,11 @@
-from fastapi import FastAPI,Websocket
+from fastapi import FastAPI, WebSocket
 
 #creacion de la app
 app = FastAPI()
 
 #endpoint que vamos a recibir
-@app.websocket('./')
-async def echo(websocket: Websocket):
+@app.websocket('/')
+async def echo(websocket: WebSocket):
     #se acepta el socket
     await websocket.accept()
     
